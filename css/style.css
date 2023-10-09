@@ -140,17 +140,34 @@ img {
     color: var(--DARK);
 }
 .menu .item {
-    display: block;
-    padding: 24px 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
-.item-menu {
+.link-item-menu {
+    position: relative;
+    display: inline-flex;
+	flex-direction: column;
+	gap: 0.25em;
+    padding: 24px 0;
     font-weight: 500;
     color: var(--DARK);
 }
-.item-address {
+.link-item-menu.current {
+    color: var(--PRESSED-STATE);
+}
+.link-item-menu.current::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--PRESSED-STATE);
+}
+.link-item-address {
+    display: block;
     font-style: normal;
     font-weight: 400;
     color: var(--TEXT);
