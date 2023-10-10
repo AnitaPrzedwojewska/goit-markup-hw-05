@@ -62,11 +62,6 @@ img {
 .link {
     text-decoration: none;
 }
-.item:hover,
-.item:focus,
-.item:active {
-    color: var(--PRESSED-STATE);
-}
 .item-title {
     margin-bottom: 8px;
     font-size: 20px;
@@ -139,6 +134,16 @@ img {
 .studio-dark {
     color: var(--DARK);
 }
+.item {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item:hover,
+.item:focus,
+.item:active {
+    color: var(--PRESSED-STATE);
+}
 .menu .item {
     font-size: 16px;
     line-height: 1.5;
@@ -164,7 +169,7 @@ img {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    background: var(--PRESSED-STATE);
+    background: currentColor;
 }
 .link-item-address {
     display: block;
@@ -205,10 +210,12 @@ img {
     background-color: var(--PRIMARY-BRAND);
     border: none;
     cursor: pointer;
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn.order:hover,
-.btn.order:focus,
-.btn.order:active {
+.btn.order:focus {
     color: var(--WHITE);
     background-color: var(--PRESSED-STATE);
 }
@@ -230,8 +237,8 @@ img {
     background-color: var(--LIGHT);
 }
 .svg-our-advantages {
-    width: 64;
-    height: 64;
+    width: 64px;
+    height: 64px;
     fill: var(--LIGHT);
 }
 /* ---------------------------- WE DO */
@@ -288,14 +295,17 @@ img {
     padding: 12px;
     background-color: var(--PRIMARY-BRAND);
     border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sm-our-team:hover,
 .sm-our-team:focus {
     background-color: var(--PRESSED-STATE);
 }
 .svg-our-team {
-    width: 16;
-    height: 16;
+    width: 16px;
+    height: 16px;
     fill: var(--LIGHT);
 }
 /* ---------------------------- CUSTOMERS */
@@ -319,6 +329,9 @@ img {
     color: var(--LATE-TEXT);
     border: 1px solid var(--LATE-TEXT);
     border-radius: 4px;
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-customers:hover,
 .link-customers:focus {
@@ -326,8 +339,8 @@ img {
     border-color: var(--PRESSED-STATE);
 }
 .svg-customers {
-    width: 104;
-    height: 56;
+    width: 168px;
+    height: 88px;
     fill: currentColor;
 }
 /* ---------------------------- PORTFOLIO */
@@ -345,13 +358,15 @@ img {
     background-color: var(--LIGHT);
     border: 1px solid var(--ACCENT);
     cursor: pointer;
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn.filters:hover,
-.btn.filters:focus,
-.btn.filters:active {
+.btn.filters:focus {
     color: var(--WHITE);
     background-color: var(--PRESSED-STATE);
-    border: 1px solid transparent;
+    border-color: transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
             0px 2px 1px rgba(0, 0, 0, 0.08), 
             0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -365,10 +380,12 @@ img {
 }
 .link-portfolio {
     display: block;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-portfolio:hover,
-.link-portfolio:focus,
-.link-portfolio:active
+.link-portfolio:focus
  {
     box-shadow: 0px 2px 1px 0px var(--SHADOW-LESS), 
             0px 1px 1px 0px var(--SHADOW-MORE), 
@@ -435,13 +452,16 @@ img {
     height: 100%;
     background-color: var(--PRIMARY-BRAND);
     border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-sm-footer:hover,
 .link-sm-footer:focus {
     background-color: var(--SUCCESS);
 }
 .svg-sm-footer {
-    width: 24;
-    height: 24;
+    width: 24px;
+    height: 24px;
     fill: var(--LIGHT);
 }
