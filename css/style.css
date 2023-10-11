@@ -1,23 +1,5 @@
-:root {
-	--PRIMARY-BRAND: #4d5ae5;
-	--PRESSED-STATE: #404bbf;
-	--DARK: #2e2f42;
-    --SUCCESS: #31d0aa;
-	--TEXT: #434455;
-	--LATE-TEXT: #8e8f99;
-	--ACCENT: #e7e9fc;
-	--LIGHT: #f4f4fd;
-    --WHITE: #fff;
-    --MODAL-OVERLAY: rgba(46, 47, 66, 0.70);/* #2e2f42b3 70% */
-    --SHADOW-LESS: rgba(46, 47, 66, 0.08);  /* #2e2f4214 8% */
-    --SHADOW-MORE: rgba(46, 47, 66, 0.16);  /* #2e2f4229 16% */
+@import url('./vars.css');
 
-    --GAP-BASIC: 24px;
-    --GAP-HEADER: 40px;
-    --WIDTH-THREE: calc((100% - 2*var(--GAP-BASIC)) / 3);
-    --WIDTH-FOUR: calc((100% - 3*var(--GAP-BASIC)) / 4);
-    --WIDTH-SIX: calc((100% - 5*var(--GAP-BASIC)) / 6);
-}
 * {
   margin: 0;
   padding: 0;
@@ -134,17 +116,8 @@ img {
 .studio-dark {
     color: var(--DARK);
 }
-.item {
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.item:hover,
-.item:focus,
-.item:active {
-    color: var(--PRESSED-STATE);
-}
-.menu .item {
+.item-menu,
+.item-address {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -157,6 +130,9 @@ img {
     padding: 24px 0;
     font-weight: 500;
     color: var(--DARK);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-item-menu.current {
     color: var(--PRESSED-STATE);
@@ -176,6 +152,16 @@ img {
     font-style: normal;
     font-weight: 400;
     color: var(--TEXT);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-item-menu:hover,
+.link-item-menu:focus,
+.link-item-address:hover,
+.link-item-address:focus
+{
+    color: var(--PRESSED-STATE);
 }
 /* ---------------------------- MOTTO */
 .section.motto {
@@ -218,6 +204,61 @@ img {
 .btn.order:focus {
     color: var(--WHITE);
     background-color: var(--PRESSED-STATE);
+}
+.btn-close-order {
+    position: relative;
+    top: 24px;
+    right: 24px;
+    
+}
+.modal {
+    position: fixed;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--MODAL-OVERLAY);
+    visibility: visible;
+
+}
+.modal-box {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    top: calc(50vh - 292px); 
+    left: calc(50vw - 204px);
+    width: 408px;
+    height: 584px;
+    background-color: var(--MODAL-BOX);
+    border-radius: 4px;
+    opacity: 1;
+    visibility: visible;
+}
+.btn-close-order {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ACCENT);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 50%;
+}
+.svg-close-order {
+    width: 8px;
+    height: 8px;
+    fill: var(--DARK);
+}
+.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    /* transform: scale(); */
 }
 /* ---------------------------- OUR ADVANTAGES */
 .list-our-advantages {
@@ -379,7 +420,10 @@ img {
     width: var(--WIDTH-THREE);
 }
 .link-portfolio {
+    position: relative;
     display: block;
+    width: 100%;
+    height: 100%;
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -390,6 +434,27 @@ img {
     box-shadow: 0px 2px 1px 0px var(--SHADOW-LESS), 
             0px 1px 1px 0px var(--SHADOW-MORE), 
             0px 1px 6px 0px var(--SHADOW-LESS);
+}
+.img-overlay {
+    position: absolute;
+    display: block;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.img-overlay::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 300px;
+    background-color: var(--PRIMARY-BRAND);
+    color: var(--LIGHT);
+}
+.link-portfolio:hover.img-overlay::after {
+    transform: translateY(-100%);
 }
 .caption-portfolio {
     padding: 32px 16px;
