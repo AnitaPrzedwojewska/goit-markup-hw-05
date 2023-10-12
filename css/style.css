@@ -208,7 +208,6 @@ img {
     position: relative;
     top: 24px;
     right: 24px;
-    
 }
 .modal {
     position: fixed;
@@ -220,7 +219,7 @@ img {
     height: 100vh;
     background-color: var(--MODAL-OVERLAY);
     visibility: visible;
-
+    pointer-events: none;
 }
 .modal-box {
     position: absolute;
@@ -234,6 +233,7 @@ img {
     border-radius: 4px;
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
 }
 .btn-close-order {
     position: absolute;
