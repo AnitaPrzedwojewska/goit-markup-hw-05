@@ -506,6 +506,9 @@ img {
         0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%) scale(1);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-close-order {
     position: absolute;
@@ -534,9 +537,9 @@ img {
 }
 .svg-close-order {
     width: 8px;
-    height: 8px;
+    height: 8px; 
+    fill: currentColor; 
     transition-property: fill;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-    fill: currentColor; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
