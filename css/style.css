@@ -399,7 +399,8 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
 }
-.link-portfolio:hover .overlay-txt {
+.link-portfolio:hover .overlay-txt,
+.link-portfolio:focus .overlay-txt {
     transform: translateY(0%);
 }
 .caption-portfolio {
@@ -491,8 +492,7 @@ img {
     /* transition-property: opacity, visibility;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .is-hidden {
     visibility: hidden;
@@ -542,7 +542,7 @@ img {
     /* transition-property: background-color, border, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-close-order:hover,
 .btn-close-order:focus {
