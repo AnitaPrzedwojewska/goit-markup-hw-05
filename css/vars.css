@@ -10,8 +10,8 @@
     --WHITE: #fff;
     --MODAL-BOX: #fcfcfc;
     --MODAL-OVERLAY: rgba(46, 47, 66, 0.70);/* #2e2f42b3 70% */
-    --SHADOW-LESS: rgba(46, 47, 66, 0.08);  /* #2e2f4214 8% */
-    --SHADOW-MORE: rgba(46, 47, 66, 0.16);  /* #2e2f4229 16% */
+    /* --SHADOW-LESS: rgba(46, 47, 66, 0.08);  #2e2f4214 8% */
+    /* --SHADOW-MORE: rgba(46, 47, 66, 0.16);  #2e2f4229 16% */
 
     --GAP-BASIC: 24px;
     --GAP-HEADER: 40px;
